@@ -1,0 +1,189 @@
+:root {
+    --primary-color: #ff8724;
+    --primary-color-hover: #ffa154;
+    --primary-color-active: #e06b1f;
+    --primary-border-color: #ededed;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.primary-btn {
+    width: 100%;
+    border: unset;
+    border-radius: 32px;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.primary-btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.primary-btn:active {
+    background-color: var(--primary-color-active);
+}
+
+.icon-btn {
+    border: unset;
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.text-gray {
+    color: #A2A6AE;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+/* width */
+
+.w-full {
+    width: 100%;
+}
+
+/* border */
+
+.border-t-0 {
+    border-top-width: 0px;
+}
+
+.border-b-2 {
+    border-bottom-width: 2px;
+}
+
+.border-x-0 {
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.border-y-2 {
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
+
+.border-solid {
+    border-style: solid;
+}
+
+.border-primary-color {
+    border-color: var(--primary-border-color);
+}
+
+/* margin */
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+/* padding */
+.p-3 {
+    padding: 0.75rem;
+}
+
+.py-0 {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.px-0 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.px-3\.5 {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* gap */
+.gap-3 {
+    gap: 0.75rem;
+}
+
+.gap-5 {
+    gap: 1.25rem;
+}
+
+.gap-7 {
+    gap: 1.75rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+/* font size */
+.text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+.text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+/* white-space */
+.white-space-nowrap {
+    white-space: nowrap;
+}
