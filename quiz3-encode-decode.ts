@@ -6,12 +6,13 @@ const generatedCharactersSet = (encodeLength: number = 9, startCharacter?: strin
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     let removeCharInSet = characters
     const generatedCharacters = {}
-    const randIndex = startCharacter ? characters.indexOf(startCharacter) : Math.floor(Math.random() * characters.length)
+    const characterIndex = startCharacter ? characters.indexOf(startCharacter) : Math.floor(Math.random() * characters.length)
 
     for (let i = 0; i <= encodeLength; i++) {
-      const nextPos = (randIndex + i) % characters.length
+      const nextPos = (characterIndex + i) % characters.length
       Object.assign(generatedCharacters, { [i.toString()]: characters[nextPos] })
       removeCharInSet = removeCharInSet.replace(characters[nextPos], '') // remove duplicate values from 1st chararacter generated
+      // ตรงนี้ผมไม่แน่ใจว่าการ random ตัวอักษรที่ 2 ต้องไม่ซ้ำกับเฉพาะตัวอักษรที่ 1 หรือค่า object ทีไ่ด้จากตัวอักษรที่ 1 ผมเลยเลือกที่จะใช้ค่าที่ไม่ซ้ำกับ object ที่ได้จากตัวอักษรที่ 1
     }
 
     const secondCharacter = removeCharInSet[Math.floor(Math.random() * removeCharInSet.length)] // generated 2nd character
