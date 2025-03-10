@@ -1,5 +1,4 @@
-function Quiz1(): boolean {
-    const inputData = '((123){33}[   ])'
+function Quiz1(inputData): boolean {
     const bracketStack: string[] = []
     const brackets = {
         ')': '(',
@@ -8,9 +7,9 @@ function Quiz1(): boolean {
     }
 
     for (let bracket of inputData) {
-        if (bracket === '(' || bracket === '{' || bracket === '[') {
+        if (Object.values(brackets).includes(bracket)) {
             bracketStack.push(bracket)
-        } else if (bracket === ')' || bracket === '}' || bracket === ']') {
+        } else if (Object.keys(brackets).includes(bracket)) {
             if (bracketStack.length === 0 || bracketStack.pop() !== brackets[bracket]) {
                 return false
             }
